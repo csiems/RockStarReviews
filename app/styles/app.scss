@@ -14,3 +14,15 @@ $border-radius-small: 0;
 
 // Main elements
 $body-bg: $gray-lighter;
+
+
+// Buttons
+$brand-primary:         $gray;
+
+@import "bootstrap";
+
+
+.col-center {
+  margin: 0 auto;
+  display: block;
+}
