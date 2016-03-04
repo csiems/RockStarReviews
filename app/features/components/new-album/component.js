@@ -1,14 +1,14 @@
 import Ember from 'ember';
 
-const {set} = Ember;
+const {set, get} = Ember;
 
 export default Ember.Component.extend({
   classNames: 'new',
 
   actions:{
 
-    save(title, body){
-      this.sendAction('save', title, artist, studio, releaseYear, imageURL, body);
+    saveAlbum(title, artist, studio, releaseYear, imageURL, body){
+      this.sendAction('saveAlbum', title, artist, studio, releaseYear, imageURL, body);
       set(this,'title','');
       set(this,'artist','');
       set(this,'studio','');
@@ -16,6 +16,6 @@ export default Ember.Component.extend({
       set(this,'imageURL','');
       set(this,'body','');
     }
-    
+
   }
 });

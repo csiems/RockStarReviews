@@ -1,14 +1,15 @@
 import DS from 'ember-data';
 
 export default DS.Model.extend({
-    title: DS.attr('string'),
-    artist: DS.attr('string'),
-    studio: DS.attr('string'),
-    releaseYear: DS.attr('string'),
-    imageURL: DS.attr('string'),
-    body: DS.attr('string'),
-    titleURL: DS.attr('string'),
-    reviews: DS.hasMany('review' ),
-    date: DS.attr('date')
+    title: DS.attr(),
+    artist: DS.attr(),
+    studio: DS.attr(),
+    releaseYear: DS.attr(),
+    imageURL: DS.attr(),
+    body: DS.attr(),
+    titleURL: DS.attr(),
+    reviews: DS.hasMany('review'),
+    ratings: DS.hasMany('rating'),
+    date: DS.attr()
 
 });

@@ -5,5 +5,6 @@ export default DS.Model.extend({
   username: DS.attr('string'),
   avatar: DS.attr('string'),
   albums: DS.hasMany('album'),
-  reviews: DS.hasMany('review')
+  reviews: DS.hasMany('review'),
+  ratings: DS.hasMany('rating')
 });

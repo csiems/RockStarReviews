@@ -7,7 +7,8 @@ const {get, set } = Ember;
 export default Ember.Route.extend({
 
   actions: {
-    save(title, artist, studio, releaseYear, imageURL, body) {
+    saveAlbum(title, artist, studio, releaseYear, imageURL, body) {
+
       let user = null;
       let titleURL = cleanURI(title);
       let uid = get(this, 'session.uid');

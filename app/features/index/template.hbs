@@ -1,15 +1,7 @@
 <div class = 'row main'>
   <div class='col-sm-8'>
     {{#each model as |album|}}
-      <div class="col-sm-4">
-        <img src="{{album.imageURL}}"/>
-      </div>
-
-    <h2 class='album-title'>{{#link-to 'albums' album.titleURL}}{{album.title}}{{/link-to}}</h2>
-    <section class='album excerpt'>
-        <p>{{album.body}} -{{album.user.username}}</p>
-    </section>
-    {{#link-to 'albums' album.titleURL}}continue reading &#8594;{{/link-to}}
+      {{album-tile album=album session=session}}
     {{/each}}
   </div>
 

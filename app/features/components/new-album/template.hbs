@@ -1,11 +1,11 @@
 <div class='col-sm-10 offset1 border col-center'>
-  <form class="new-album" {{action 'save' title body on='submit'}}>
+  <form class="new-album" {{action 'saveAlbum' title artist studio releaseYear imageURL body on='submit'}}>
     <div class="form-group">
       <label for="title">Title</label>
       {{input value=title class="form-control" id="title"}}
       <label for="artist">Artist</label>
       {{input value=artist class="form-control" id="artist"}}
-      <label for="studio">Studio</label>
+      <label for="studio">Label</label>
       {{input value=studio class="form-control" id="studio"}}
       <label for="releaseYear">Year of Release</label>
       {{input value=releaseYear class="form-control" id="releaseYear"}}
