@@ -1,0 +1,16 @@
+// Colors
+$white:                  #fff;
+$gray-lighter:           #eee;
+$gray-light:             darken($gray-lighter, 30%);
+$gray:                   darken($gray-lighter, 67%);
+$gray-dark:              darken($gray-lighter, 80%);
+$gray-darker:            darken($gray-lighter, 87%);
+$gray-base:              darken($gray-lighter, 100%);
+
+// Border
+$border-radius-base: 0;
+$border-radius-large: 0;
+$border-radius-small: 0;
+
+// Main elements
+$body-bg: $gray-lighter;
