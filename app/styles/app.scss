@@ -103,6 +103,32 @@ div {
   position: relative;
   margin: 0 auto;
 
+  .review-tile {
+    position:relative;
+    width: 600px;
+    margin: 0 auto;
+    display: block;
+    margin: 10px;
+    min-height: 150px;
+    background-color: $white;
+    overflow: hidden;
+
+    .tag {
+      float: right;
+    }
+
+    .body {
+      font-size: 16px;
+      padding: 10px;
+      margin-right: 60px;
+      max-width: 550px;
+      float: left;
+      word-wrap: break-word;
+    }
+
+
+  }
+
   .twitter-avatar {
     float: left;
     height: 70px;
@@ -114,5 +140,7 @@ div {
 
   textarea {
     width: 520px;
+    height: 400px;
+    font-size: 20px;
   }
 }

@@ -9,10 +9,18 @@
     </div>
   {{/unless}}
   {{#each album.reviews as |review|}}
-    <div class='reviews'>
-      <img src='{{review.user.avatar}}'/>
-        {{review.body}}<br>
-      <a href='http://twitter.com/{{review.user.username}}' target='_blank'>{{review.user.username}}</a><br>
+    <div class='review-tile'>
+      <div class="tag">
+        <div class="image">
+          <img src='{{review.user.avatar}}'/>
+        </div>
+        <div class="username">
+          <a href='http://twitter.com/{{review.user.username}}' target='_blank'>{{review.user.username}}</a><br>
+        </div>
+      </div>
+      <div class="body">
+        <p> {{markdown-to-html markdown=review.body}} </p>
+      </div>
     </div>
   {{/each}}
   {{#if session.isAuthenticated}}
@@ -20,14 +28,10 @@
       <div class="twitter-avatar">
         <img src='{{session.currentUser.profileImageURL}}'/>
         <h6>{{session.currentUser.username}}</h6>
-        {{#if session.currentUser.reviews}}
-          <h6>0 reviews</h6>
-        {{else}}
-          <h6>{{session.currentUser.reviews}} reviews</h6>
-        {{/if}}
+        <button {{action 'createReview' session body}}>Submit</button>
       </div>
-      <textarea rows='8' placeholder='Add Your Review' value= {{body}} onchange={{action (mut body) value='target.value'}} />
-      <button {{action 'submitComment' session body}}>Submit</button>
+      <textarea placeholder='Add Your Review' value= {{body}} onchange={{action (mut body) value='target.value'}} />
+
     </div>
   {{/if}}
 </div>
