@@ -8,7 +8,7 @@ export default DS.Model.extend({
     imageURL: DS.attr(),
     body: DS.attr(),
     titleURL: DS.attr(),
-    reviews: DS.hasMany('review'),
+    reviews: DS.hasMany('review', {async: true}),
     date: DS.attr()
 
 });
