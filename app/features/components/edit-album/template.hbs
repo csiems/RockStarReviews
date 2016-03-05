@@ -1,1 +1,50 @@
-{{yield}}
+{{#link-to  'index'}}
+&#8592; back
+{{/link-to}}
+{{log }}
+
+{{#each model as |album|}}
+  <div class='row'>
+    {{#if isEditing}}
+      <div class='col-sm-10 offset1 border col-center'>
+        <form class="new-album" {{action 'saveAlbum' title artist studio releaseYear imageURL body on='submit'}}>
+          <div class="form-group">
+            <label for="title">Title</label>
+            {{input value=title class="form-control" id="title"}}
+            <label for="artist">Artist</label>
+            {{input value=artist class="form-control" id="artist"}}
+            <label for="studio">Label</label>
+            {{input value=studio class="form-control" id="studio"}}
+            <label for="releaseYear">Year of Release</label>
+            {{input value=releaseYear class="form-control" id="releaseYear"}}
+            <label for="imageURL">Image URL</label>
+            {{input value=imageURL class="form-control" id="imageURL"}}
+            <label for="body">Description</label>
+            {{textarea rows=20 value=body class="form-control" id="body"}}
+          </div>
+          <button type='submit' class='btn btn-primary'>Add Album</button>
+        </form>
+      </div>
+    {{/if}}
+
+    <div class="album-header">
+      <div class="album-header-image">
+        <img src="{{album.imageURL}}"/>
+      </div>
+      <div class="album-header-title-display">
+        <h1>{{album.title}}</h1>
+        <h2>{{album.artist}}</h2>
+        <h4>{{album.studio}} | {{album.releaseYear}}</h4>
+      </div>
+      <div class="album-header-description">
+        <p>{{markdown-to-html markdown=album.body}}</p>
+      </div>
+      <div class="font-icon">
+        <i class="fa fa-headphones fa-3x"></i>
+      </div>
+    </div>
+
+  </div>
+
+  {{add-reviews album=album session=session store='createReview' }}
+{{/each}}

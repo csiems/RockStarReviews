@@ -9,7 +9,6 @@ export default DS.Model.extend({
     body: DS.attr(),
     titleURL: DS.attr(),
     reviews: DS.hasMany('review'),
-    ratings: DS.hasMany('rating'),
     date: DS.attr()
 
 });

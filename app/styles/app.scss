@@ -42,28 +42,77 @@ div {
   -moz-box-shadow: 1px 1px 8px -1px $gray-light;
   box-shadow: 1px 1px 8px -1px $gray-light;
 
-}
-.album-tile-image {
-  float: left;
-  img {
-    width: 319px;
-    height: 319px;
+  .album-tile-image {
+    float: left;
+    img {
+      width: 319px;
+      height: 319px;
+    }
+  }
+
+  .album-tile-info {
+   position:relative;
+   width: 299px;
+   float: right;
+   margin-right: 10px;
+
+  }
+
+  .album-tile-excerpt {
+    margin-top: 10px;
+  }
+
+  .read-more {
+    text-align: center;
+    position: relative;
   }
 }
 
-.album-tile-info {
- position:relative;
- width: 299px;
- float: right;
- margin-right: 10px;
+.album-header {
+  img {
+    height: 500px;
+    width: 500px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+  }
 
+  h1, h2, h4 {
+    text-align: center;
+  }
+
+  .album-header-description {
+    max-width: 600px;
+    position: relative;
+    margin: 0 auto;
+    display: block;
+    text-align: justify;
+    padding: 10px;
+  }
+
+  .font-icon {
+    margin-top: 20px;
+    text-align: center;
+  }
 }
 
-.album-tile-excerpt {
-  margin-top: 10px;
-}
-
-.read-more {
+.review-container {
+  max-width: 600px;
+  top-margin: 20px;
   text-align: center;
   position: relative;
+  margin: 0 auto;
+
+  .twitter-avatar {
+    float: left;
+    height: 70px;
+    width: 70px;
+  }
+  .twitter-user {
+    float: left;
+  }
+
+  textarea {
+    width: 520px;
+  }
 }
